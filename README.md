@@ -1,6 +1,4 @@
-# flutter_telecom
-
-A flutter app for  telecom
+A flutter app for telecom
 
 ## Getting Started
 
