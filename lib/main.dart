@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage>  with SingleTickerProviderState
           isScrollable: true,
           tabs: <Widget>[
             Tab(icon: Icon(Icons.star)),
-            Tab(icon: Icon(Icons.timer)),
+            Tab(icon: Icon(Icons.history)),
             Tab(icon: Icon(Icons.people))
           ],
         )),
