@@ -13,17 +13,16 @@ class MyApp extends StatelessWidget {
       title: '电话',
       color: Colors.blue,
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue
-      ),
+          // This is the theme of your application.
+          //
+          // Try running your application with "flutter run". You'll see the
+          // application has a blue toolbar. Then, without quitting the app, try
+          // changing the primarySwatch below to Colors.green and then invoke
+          // "hot reload" (press "r" in the console where you ran "flutter run",
+          // or simply save your changes to "hot reload" in a Flutter IDE).
+          // Notice that the counter didn't reset back to zero; the application
+          // is not restarted.
+          primarySwatch: Colors.blue),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -47,15 +46,16 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage>  with SingleTickerProviderStateMixin {
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
   int _counter = 0;
 
   TabController _tabController;
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    _tabController = TabController(vsync:this,length: 3);
+    _tabController = TabController(vsync: this, length: 3);
   }
 
   @override
@@ -68,30 +68,29 @@ class _MyHomePageState extends State<MyHomePage>  with SingleTickerProviderState
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Container(
-          padding: EdgeInsets.only(left: 20),
-          color: Colors.white,
-          child: TextField(
-            decoration: InputDecoration(
-                contentPadding: EdgeInsets.all(10),
-                icon:Icon(Icons.search),
-                hintText: '搜索联系人',
-                border: InputBorder.none
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Container(
+            padding: EdgeInsets.only(left: 20),
+            color: Colors.white,
+            child: TextField(
+              decoration: InputDecoration(
+                  contentPadding: EdgeInsets.all(10),
+                  icon: Icon(Icons.search),
+                  hintText: '搜索联系人',
+                  border: InputBorder.none),
             ),
           ),
-        ),
-        bottom: TabBar(
-          controller: _tabController,
-          labelPadding: EdgeInsets.only(left: 50,right: 50),
-          isScrollable: true,
-          tabs: <Widget>[
-            Tab(icon: Icon(Icons.star)),
-            Tab(icon: Icon(Icons.history)),
-            Tab(icon: Icon(Icons.people))
-          ],
-        )),
+          bottom: TabBar(
+            controller: _tabController,
+            labelPadding: EdgeInsets.only(left: 50, right: 50),
+            isScrollable: true,
+            tabs: <Widget>[
+              Tab(icon: Icon(Icons.star)),
+              Tab(icon: Icon(Icons.history)),
+              Tab(icon: Icon(Icons.people))
+            ],
+          )),
       body: TabBarView(
         controller: _tabController,
         children: <Widget>[
@@ -101,10 +100,12 @@ class _MyHomePageState extends State<MyHomePage>  with SingleTickerProviderState
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed:() => { Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => Dail()),
-        )},
+        onPressed: () => {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Dail()),
+          )
+        },
         tooltip: 'Increment',
         child: Icon(Icons.dialpad),
       ), // This trailing comma makes auto-formatting nicer for build methods.
