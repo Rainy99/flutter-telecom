@@ -33,7 +33,7 @@ class _HistoryItem extends StatelessWidget{
                 children: <Widget>[
                   Container(
                     padding: EdgeInsets.all(10),
-                      child:Icon(Icons.person,color: Colors.lightBlue,size: 35)
+                      child:Icon(Icons.account_circle,color: Colors.lightBlue,size: 35)
                   )
                 ],
               ),
